@@ -17,7 +17,7 @@ async function criaVideo (titulo, descricao, url, imagem) {
         },
         body: JSON.stringify({
             titulo: titulo,
-            descricao: descricao,
+            descricao: `${descricao} mil visualizações`,
             url: url,
             imagem: imagem
         })
