@@ -1,3 +1,8 @@
+/* Iniciando a API:
+npm init
+json-server --watch db.json
+*/
+
 async function listaVideos () {
     const conexao = await fetch ("http://localhost:3000/videos");
     const conexaoConvertida = await conexao.json();
