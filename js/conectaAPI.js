@@ -4,7 +4,7 @@ json-server --watch db.json
 */
 
 async function buscaVideos (termoDeBusca) {
-    const conexao = await fetch (`http//localhost:3000/videos?q=${termoDeBusca}`);
+    const conexao = await fetch (`http://localhost:3000/videos?q=${termoDeBusca}`);
     const conexaoConvertida = await conexao.json();
     return conexaoConvertida;
 }
@@ -37,5 +37,6 @@ async function criaVideo (titulo, descricao, url, imagem) {
 
 export const conectaAPI = {
     listaVideos,
-    criaVideo
+    criaVideo,
+    buscaVideos
 }
