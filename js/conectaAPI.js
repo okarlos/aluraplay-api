@@ -3,6 +3,12 @@ npm init
 json-server --watch db.json
 */
 
+async function buscaVideos (termoDeBusca) {
+    const conexao = await fetch (`http//localhost:3000/videos?q=${termoDeBusca}`);
+    const conexaoConvertida = await conexao.json();
+    return conexaoConvertida;
+}
+
 async function listaVideos () {
     const conexao = await fetch ("http://localhost:3000/videos");
     const conexaoConvertida = await conexao.json();
