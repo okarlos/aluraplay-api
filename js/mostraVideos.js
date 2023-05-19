@@ -2,7 +2,7 @@ import { conectaAPI } from "./conectaAPI.js";
 
 const lista = document.querySelector("[data-lista]");
 
-function montaCard (titulo, descricao, url, imagem) {
+export default function montaCard (titulo, descricao, url, imagem) {
     const video = document.createElement("li");
     video.className = "videos__item";
     video.innerHTML = 
