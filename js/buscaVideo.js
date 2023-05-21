@@ -5,7 +5,8 @@ async function buscaVideos (e) {
     e.preventDefault();
     const dadosDePesquisa = document.querySelector("[data-pesquisa]").value;
     const busca = await conectaAPI.buscaVideos(dadosDePesquisa);
-    const lista = document.querySelector("[data-lista]")   
+    const lista = document.querySelector("[data-lista]");
+    const erro = document.querySelector("[data-erro]")
     
     lista.innerHTML = ''
     
@@ -13,11 +14,14 @@ async function buscaVideos (e) {
         montaCard(e.titulo, e.descricao, e.url, e.imagem)));
 
     if (busca.length === 0) {
-        lista.innerHTML = 
+        erro.innerHTML = 
         `
         <h2 class="mensagem__titulo">Oops... não existem vídeos com esse termo!</h2><br>
-        <button onclick="location.reload()" class="centro formulario__botao">Recarregar</button>
+        <button onclick="location.reload()" class="centro formulario__botao">Ver todos</button>
         `
+        erro.classList.remove("sumir")
+    } else {
+        erro.innerHTML = ''
     }
 }
 

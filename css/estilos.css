@@ -52,6 +52,17 @@ body {
 
 /* ESTILOS DA SEÇÃO VÍDEOS */
 
+.erro {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sumir {
+    display: none;
+}
+
 .videos__container {
     color: black;
 }
@@ -97,10 +108,6 @@ body {
 .cabecalho__pesquisar {
     display: flex;
     justify-content: center;
-}
-
-.centro {
-    margin: 0 auto;
 }
 
 @media(min-width: 834px) {
