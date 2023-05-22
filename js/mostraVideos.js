@@ -1,6 +1,7 @@
 import { conectaAPI } from "./conectaAPI.js";
 
 const lista = document.querySelector("[data-lista]");
+const erro = document.querySelector("[data-erro]");
 
 export default function montaCard (titulo, descricao, url, imagem) {
     const video = document.createElement("li");
@@ -23,9 +24,18 @@ export default function montaCard (titulo, descricao, url, imagem) {
 }
 
 async function listaVideos() {
-    const listaApi = await conectaAPI.listaVideos();
-    listaApi.forEach(element => lista.appendChild(
-        montaCard(element.titulo, element.descricao, element.url, element.imagem)));
+    try {
+        const listaApi = await conectaAPI.listaVideos();
+        listaApi.forEach(element => lista.appendChild(
+            montaCard(element.titulo, element.descricao, element.url, element.imagem)));
+    } catch {
+        erro.innerHTML = 
+        `
+        <h2 class="mensagem__titulo">Oops... não existem vídeos aqui!</h2><br>
+        <button onclick="location.reload()" class="centro formulario__botao">Tenar novamente</button>
+        `
+        erro.classList.remove("sumir");
+    }
 }
 
 listaVideos()

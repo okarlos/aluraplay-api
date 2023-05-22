@@ -17,9 +17,9 @@ async function buscaVideos (e) {
         erro.innerHTML = 
         `
         <h2 class="mensagem__titulo">Oops... não existem vídeos com esse termo!</h2><br>
-        <button onclick="location.reload()" class="centro formulario__botao">Ver todos</button>
+        <button onclick="location.reload()" class="centro formulario__botao">Ver todos os vídeos</button>
         `
-        erro.classList.remove("sumir")
+        erro.classList.remove("sumir");
     } else {
         erro.innerHTML = ''
     }
