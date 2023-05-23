@@ -12,4 +12,5 @@ Este projeto consiste em uma página inicial e um formulário de cadastro de ví
 - Consumo da API para listar os vídeos;
 - Tratamento para quando nenhum video corresponde à busca;
 - POST para inclusão de novos vídeos, subindo na API;
-- 
+- Tratamento de erro ao subir video;
+- Possibilidade de filtrar os videos na tela.
