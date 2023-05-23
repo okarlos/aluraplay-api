@@ -1,23 +1,15 @@
-<p align="center"> <img src="https://imgur.com/J3hD21O.png" alt="Javascript: criando requisições"> </p>
+# AluraPlay Requisições
 
-<hr>
-
-<p align="center"> <img src="https://github.com/MonicaHillman/aluraplay-requisicoes/blob/main/img/logo.png" alt="Logo da Alura"> </p>
-<p align="center">Página inicial e formulário de cadastro de vídeos da AluraPlay, uma plataforma de compartilhamento de vídeos.</p>
-
+Este projeto consiste em uma página inicial e um formulário de cadastro de vídeos para a AluraPlay, uma plataforma de compartilhamento de vídeos.
 ## Tecnologias utilizadas durante o curso
-* Javascript
-* NodeJS
-* Json-server
-
-## Tecnologias utilizadas no projeto
-* HTML
-* CSS
-
-## Screenshots
-![Screenshot da tela inicial do AluraPlay](https://imgur.com/aymxEsh.png)
-![Screenshot da tela do formulário do AluraPlay](https://imgur.com/ShNADf2.png)
-
-
+- Javascript
+- NodeJS
+- Json-server
+- HTML
+- CSS
+## Resumo
+- Utilizado Node com Json-server para mockar uma API;
+- Consumo da API para listar os vídeos;
 - Tratamento para quando nenhum video corresponde à busca;
+- POST para inclusão de novos vídeos, subindo na API;
 - 
